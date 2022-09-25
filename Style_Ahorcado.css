@@ -1,0 +1,557 @@
+
+
+.LogoAlura{
+
+    text-align: left;
+    padding: 1%;
+
+}
+
+body{
+  height: 100vh;
+  background-color: #80f2f6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+  font-family: 'Montserrat', sans-serif;
+}
+.Botones{
+    display: block;
+    padding: 0 0 0 0;
+    list-style: none;
+    text-align: center;
+}
+
+.NewGame {
+    padding: 1.5em 5em;
+    margin: 2%;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+.NewGame:hover {
+    background-color: #2ea3c9;
+    box-shadow: 0px 15px 20px rgba(26,131,179,255);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+.NewGame:active {
+    transform: translateY(-1px);
+  }
+.NewWord {
+    padding: 1.5em 5em;
+    margin: 2%;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+.NewWord:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(41, 126, 92, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+.NewWord:active {
+    transform: translateY(-1px);
+  }
+footer{
+  height: 20vh;
+  display:block;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+footer p {
+    text-align: center;
+    font-weight: bold;
+}
+.redes{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+}
+
+.redes li{
+    display: block;
+    width: 5%;
+    margin: 0%;
+    padding:  0 1em;
+    list-style: none;
+    justify-content: center;
+   
+}
+
+ ul li .fa-brands{
+    
+    justify-content: center;
+    font-size: 1em;
+    line-height: 1.5em;   
+    transition: 0.4s;
+    color: #000;
+}
+.redes li .fa-brands:hover{
+    color: #fff;
+}
+
+.redes li a{
+    position: relative;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    justify-content: center;
+    background-color: #fff;
+    transition: 0.4s;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+   
+}
+.redes li a:hover{
+    transform: translate( 0, -3px);
+
+}
+
+.redes li:nth-child(1) a:hover{
+   /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);*/
+   background: #E4405F;
+}
+.redes li:nth-child(2) a:hover{
+    background-color: black;
+}
+.redes li:nth-child(3) a:hover{
+    background-color: #2ea3c9;
+}
+
+.mainNewWord{
+  
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.Text_area{
+  margin: 5%;
+  height: 70%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+}
+.Text_new{
+  display: flex;
+  height: 100%;
+  width: 60%;
+  flex: content;
+  background: transparent;
+  border: transparent;
+  font-size: 2em;
+  outline: none;
+  resize: none;
+  cursor: pointer;
+  
+}
+.Buttons{
+  width: 80%;
+  display: inline;
+}
+.Botones_newWord{
+  list-style: none;
+  text-align: center;
+  height: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+.SavePlay {
+  padding: 0.9em 2em;
+  margin: 2%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.SavePlay:hover {
+  background-color: #2ea3c9;
+  box-shadow: 0px 15px 20px rgba(26,131,179,255);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.SavePlay:active {
+  transform: translateY(-1px);
+}
+.Cancel {
+  padding: 1.5em 5em;
+  margin: 2%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.Cancel:hover {
+  background-color: #eea02b;
+  box-shadow: 0px 15px 20px rgba(220, 162, 70, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.Cancel:active {
+  transform: translateY(-1px);
+}
+
+.mainNewGame{
+  
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Popup{
+    position: absolute;
+    background: white;
+    border-radius: 1vh;
+    padding: 1em 3.5em 1em 2.5em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0,0.5);
+    border-left: 0.2em solid #f44040;
+    transform: translateX(250%);
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+.Popup.active{
+  visibility: visible;
+  transform: translateX(0%);
+  
+}
+
+.Popup .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #f44040;
+    color:floralwhite;
+    border-radius: 50%;
+}
+
+.Popup .Contenido{
+
+    display:flex ;
+    align-items: center;
+
+}
+.message {
+  margin-left: 1em;
+  
+}
+
+.message .text{
+    color: #666;
+    
+}
+.Popup .close{
+    position: absolute;
+    top: 1.25em;
+    right: 1em;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.Popup .close:hover{
+    opacity: 1;
+}
+
+.Popup .barra{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.Popup .barra::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    height: 100%;
+    width: 100%;
+    background: #f44040;
+}
+
+
+.barra.active::before{
+  animation: progress 5s linear forwards;
+}
+@keyframes progress{
+    100%{
+      right: 100%;
+    }
+}
+
+*
+
+
+.Popup2{
+  position: absolute;
+  background: white;
+  border-radius: 1vh;
+  padding: 1em 3.5em 1em 2.5em;
+  box-shadow: 0 5px 10px rgba(0,0,0,0,0.5);
+  border-left: 0.2em solid #23c483;
+  transform: translateX(250%);
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+.Popup2.active{
+  visibility: visible;
+  transform: translateX(0%)
+}
+
+.Popup2 .check2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #23c483;
+  color:floralwhite;
+  border-radius: 50%;
+}
+
+.Popup2 .Contenido2{
+
+  display:flex ;
+  align-items: center;
+
+}
+.message2 {
+margin-left: 1em;
+
+}
+
+.message2 .text{
+  color: #666;
+  
+}
+.Popup2 .close2{
+  position: absolute;
+  top: 1.25em;
+  right: 1em;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.Popup2 .close2:hover{
+  opacity: 1;
+}
+
+.Popup2 .barra2{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+}
+
+.Popup2 .barra2::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  background: #23c483;
+}
+
+
+.barra2.active::before{
+animation: progress 4s linear forwards;
+}
+@keyframes progress{
+  100%{
+    right: 100%;
+  }
+}
+
+.Dibujo{
+
+  height: 60%;
+  width: 50%;
+}
+
+
+.LetrasPalabras{
+   width: 60%;
+    height: 30%;
+}
+.ListaPalabras{
+    height: 50%;
+    width: 100%;
+    text-align: center;  
+    padding: 0%;
+}
+
+.ListaPalabras li{
+    display: inline;
+    width: 5%;
+    margin: 0.5em;
+    padding:  0 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    color: transparent;
+    border-bottom:0.1em solid #000;
+}
+
+.LetrasUsadas{
+  width: 50%;
+  height: 10%;
+}
+
+.ListaUsada{
+  height: 50%;
+  width: 100%;
+  text-align: center;  
+  padding: 0%;
+}
+
+.ListaUsada li{
+  display: inline;
+  width: 5%;
+  margin: 0.2em;
+  padding:  0 0.5em;
+  font-size: 1em;
+  font-weight: bold;  
+  list-style: none;
+  text-align: center;
+  
+}
+
+
+
+.Botones_newgame{
+  list-style: none;
+  text-align: center;
+  height: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+.OtherGame {
+  padding: 0.9em 3em;
+  margin: 2%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.OtherGame:hover {
+  background-color: #2ea3c9;
+  box-shadow: 0px 15px 20px rgba(26,131,179,255);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.OtherGame:active {
+  transform: translateY(-1px);
+}
+.GiveUp {
+  padding: 1.5em 5em;
+  margin: 2%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.GiveUp:hover {
+  background-color: #eea02b;
+  box-shadow: 0px 15px 20px rgba(220, 162, 70, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.GiveUp:active {
+  transform: translateY(-1px);
+}
+
