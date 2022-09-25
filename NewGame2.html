@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahorcado</title>
+        <link rel="stylesheet" href="Style_Ahorcado.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <link rel="import" href="NewWord.html">
+    </head>
+
+    <body>    
+
+        <header>
+            <div class="LogoAlura" ><img src="Images/LogoAlura.png" alt="LogoAlura"></div>
+        </header>
+
+        <main class="mainNewGame">        
+            <canvas class="Dibujo" id="Dibujo">
+               
+            </canvas>
+
+            <div class="Popup">
+                <div class="Contenido">
+                    <i class="fas fa-solid fa-xmark check"></i>
+                    <div class="message">
+                        <span>¡ Perdiste !</span>
+                    </div>
+                </div>
+                <i class="fas fa-solid fa-xmark close"></i>
+                <div class="barra"></div>
+            </div>
+
+           <div class="Popup2">
+                <div class="Contenido2">
+                    <i class="fas fa-solid fa-check check2"></i>
+                    <div class="message2">
+                        <span>¡ Ganaste !</span>
+                    </div>
+                </div>
+                <i class="fas fa-solid fa-xmark close2"></i>
+                <div class="barra2"></div>
+            </div>
+       
+            <div class="LetrasPalabra" id="LetrasPalabras">
+                <ul class="ListaPalabras" id="ListaPalabras">
+
+                </ul>
+               
+            </div>
+
+            <div class="LetrasUsadas" id="LetrasUsadas">
+                <ul class="ListaUsada" id="ListaUsada">
+
+                </ul>
+            </div>
+
+            <div class="Buttons">
+                <ul class="Botones_newgame">
+
+                    <li>
+                        <button type="button" class="OtherGame" onclick="RandomWord()">Nuevo Juego</button>
+                    </li>
+                    <li>
+                        <a href="index.html"><button class="GiveUp">Rendirse</button></a>
+                    </li>
+                </ul> 
+            </div>
+
+        </main>
+
+        <footer>
+            <div>
+                <ul class="redes">
+                    <li><a href="https://www.instagram.com/luiscamargo.31/" ><i class="fa-brands fa-instagram instagram"></i></a></li>
+
+                    <li><a href="https://github.com/FernandoC31" ><i class="fa-brands fa-github github"></i></a></li>
+
+                    <li><a href="https://www.tiktok.com/@luiscn3108" ><i class="fa-brands fa-tiktok tiktok"></i></a></li>
+
+                </ul>
+            </div>
+
+            <div>
+                <p class="copyright">&copy Copyright Luis Camargo 2022</p>
+            </div>
+        </footer>
+        
+    </body>
+
+<script>
+
+    const Popup=document.querySelector(".Popup"),
+          closeIcon=document.querySelector(".close"),
+          barra = document.querySelector(".barra");
+    const Popup2=document.querySelector(".Popup2"),
+          closeIcon2=document.querySelector(".close2"),
+          barra2 = document.querySelector(".barra2");
+
+    var Words = ["HTML","CSS", "JAVA", "SCRIPT","PORTAFOLIO","ALURA","DISEÑO","WEBSITE","IPHONE","COMPUTADORA"];
+    var Word2=[]
+    var Longitud=Words.length
+    var Lista1=[]
+    var Palabra=""
+    var ContPalabraErronea=0
+    var NewWordAppend=localStorage.getItem("listaPalabra");
+    const canvas = document.querySelector('.Dibujo');
+    const ctx = canvas.getContext('2d');
+    
+
+    function RandomWord() {
+        trigger=0
+        ContPalabraErronea=0
+        
+        if(NewWordAppend!=[]){
+            Words.push(NewWordAppend);
+            Word2=[...new Set(Words)];
+        } ;
+
+        localStorage.clear();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Lista1=[];
+        document.getElementById("ListaPalabras").innerHTML="";
+        document.getElementById("ListaUsada").innerHTML="";
+        Palabra = Word2[Math.floor(Math.random()*(Word2.length))];      
+        var CadaLetra = Palabra.split("");
+        var Contenedor = document.querySelector('.ListaPalabras');
+        for(var i = 0; i < CadaLetra.length; i++){
+            var listado=document.createElement("li");
+            listado.innerHTML=CadaLetra[i];
+            Contenedor.append(listado)
+        }
+        return Palabra;
+        
+    }
+
+    function DibujarLineas(){
+        
+        if(ContPalabraErronea==1){
+            
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2
+            ctx.beginPath();
+            ctx.moveTo(0, 147);
+            ctx.lineTo(80, 147);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==2){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(40, 147);
+            ctx.lineTo(40, 0);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==3){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=3
+            ctx.beginPath();
+            ctx.moveTo(40, 0);
+            ctx.lineTo(160, 0);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==4){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 0);
+            ctx.lineTo(160, 30);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==5){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.arc(160, 45, 15, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==6){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 60);
+            ctx.lineTo(160, 100);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==7){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 100);
+            ctx.lineTo(145, 125);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==8){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 100);
+            ctx.lineTo(175, 125);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==9){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 70);
+            ctx.lineTo(140, 85);
+            ctx.stroke();
+        }
+        if(ContPalabraErronea==10){
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth=2
+            ctx.beginPath();
+            ctx.moveTo(160, 70);
+            ctx.lineTo(180, 85);
+            ctx.stroke();
+            
+        }
+    }
+    
+    RandomWord()
+    
+    window.addEventListener('keydown', (e) =>{
+
+        
+        document.addEventListener("tono",()=>{
+            Popup.classList.add("active");
+            barra.classList.add("active");
+            setTimeout(() =>{
+                Popup.classList.remove("active");
+                          
+            }, 5000);
+
+            setTimeout(() =>{
+                barra.classList.remove("active")
+            },5300);
+
+        })
+
+        const tono=new CustomEvent("tono")
+
+        document.addEventListener("tono2",()=>{
+            Popup2.classList.add("active");
+            barra2.classList.add("active");
+            setTimeout(() =>{
+                Popup2.classList.remove("active");
+                          
+            }, 4000);
+
+            setTimeout(() =>{
+                barra2.classList.remove("active")
+            },4300);
+
+        })
+
+        const tono2=new CustomEvent("tono2")
+
+
+        var Contenedor = document.querySelector('.ListaUsada');
+        var listado=document.createElement("li");
+        var ValorLetra= e.key.toLocaleUpperCase();
+        if(!(Palabra.includes(ValorLetra))){
+            if(!(Lista1.includes(ValorLetra))){
+                ContPalabraErronea++
+                Lista1.push(ValorLetra)
+                listado.innerHTML=ValorLetra;
+                Contenedor.append(listado);
+                DibujarLineas();
+                if (ContPalabraErronea==10){
+                    setTimeout(function() {
+                        }, 300)
+
+                   
+                    document.dispatchEvent(tono)
+                    closeIcon.addEventListener("click",()=>{
+                        
+                        Popup.classList.remove("active");
+                        setTimeout(() =>{
+                            barra.classList.remove("active")
+                        },300);
+                        
+
+                    })
+                    
+                }
+
+
+            }
+        }
+        
+        if(Palabra.includes(ValorLetra)){
+            var Contenedor = document.getElementById('ListaPalabras');
+          
+            for (var i=0;i < Palabra.length; i++){
+                
+                if (Contenedor.childNodes[i].textContent==ValorLetra){
+                    Contenedor.childNodes[i].style.color = "black";
+                };
+
+            };
+        }
+        var trigger = 0
+        for (var i=0;i < Palabra.length; i++){
+                if(Contenedor.childNodes[i].style.color == "black"){
+                    trigger=trigger+1;
+                    /*alert(trigger)*/
+                    if(trigger==Palabra.length){
+                         setTimeout(function() {
+                            }, 300)
+                            document.dispatchEvent(tono2)
+                             closeIcon2.addEventListener("click",()=>{
+                        
+                                Popup2.classList.remove("active");
+                                setTimeout(() =>{
+                                barra2.classList.remove("active")
+                                },300);
+                        
+
+                            })
+
+                    };
+                };
+            }; 
+
+            
+        
+
+    }
+
+    
+    );
+
+    
+    
+
+    
+
+</script>
+
+</html>
+
